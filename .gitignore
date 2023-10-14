@@ -1,0 +1,14 @@
+# Ignore Dir
+node_modules
+dist
+.idea
+.vscode
+
+# Ignore File
+
+
+# Dependencies Lock File
+package-lock.json
+pnpm-lock.json
+yarn.lock
+

@@ -1,0 +1,51 @@
+{
+  "name": "chrome-extension",
+  "version": "1.0.0",
+  "description": "ext desc",
+  "manifest_version": 3,
+  "icons": {
+    "16": "assets/logo_16.png",
+    "48": "assets/logo_48.png",
+    "64": "assets/logo_64.png",
+    "128": "assets/logo_128.png"
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_icon": "assets/logo_128.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "js/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/assets/*"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "notifications",
+    "contextMenus",
+    "webRequest",
+    "storage",
+    "tabs",
+    "activeTab"
+  ]
+}
