@@ -1,8 +1,7 @@
 {
-  "name": "ts-chrome-ext-demo",
+  "name": "Browser-Extension-Develop-Scaffold",
   "version": "1.0.0",
-  "description": "a chrome extension development demo with Typescript",
-  "main": "index.js",
+  "description": "Browser-Extension-Develop-Scaffold",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --watch -c webpack.dev.config.js",
     "build": "cross-env NODE_ENV=production webpack -c webpack.prod.config.js"
@@ -20,5 +19,8 @@
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "engines": {
+    "node": ">= 18"
   }
 }
